@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 
-# Session state to store the random number
+# Store random number 
 if 'random_number' not in st.session_state:
     st.session_state.random_number = random.randint(1, 100)
 
@@ -19,7 +19,7 @@ if st.button("Check Guess"):
         st.warning("Too high! Try a lower number.")
     else:
         st.success("🎉 Congratulations! You guessed the correct number.")
-        st.session_state.random_number = random.randint(1, 100)  # Reset the game
+        st.session_state.random_number = random.randint(1, 100) 
 
 # Button to restart the game
 if st.button("Restart Game"):
